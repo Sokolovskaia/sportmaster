@@ -1,6 +1,12 @@
 from app.bonus_calculation import bonuses
 
 
+def test_bonuses_for_types():
+    accrued_bonuses = bonuses("три тысячи", 100000)
+
+    assert "произошла ошибка начисления" == accrued_bonuses
+
+
 def test_bonuses_for_standard_card():
     accrued_bonuses = bonuses(2_000, 10_000)
 
@@ -19,7 +25,7 @@ def test_bonuses_for_golden_card():
     assert 100 == accrued_bonuses
 
 
-def test_bonuses_for_input_error():
-    accrued_bonuses = bonuses(1_300, -100000)
+def test_bonuses_for_input_errors():
+    accrued_bonuses = bonuses(-1000, 0)
 
-    assert "Неверное формат поля <<Суммы предыдущих покупок>>" == accrued_bonuses
+    assert "произошла ошибка начисления" == accrued_bonuses
