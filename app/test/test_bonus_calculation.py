@@ -1,12 +1,6 @@
 from app.bonus_calculation import bonuses
 
 
-def test_bonuses_for_types():
-    accrued_bonuses = bonuses("три тысячи", 100000)
-
-    assert "произошла ошибка начисления" == accrued_bonuses
-
-
 def test_bonuses_for_standard_card():
     accrued_bonuses = bonuses(2_000, 10_000)
 
