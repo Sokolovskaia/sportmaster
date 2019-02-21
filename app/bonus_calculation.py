@@ -17,6 +17,3 @@ def bonuses(purchase_amount, previous_purchase_amount):
         accrued_bonuses = input_error
 
     return accrued_bonuses
-
-
-print("У вас", bonuses(2000, 10000), "бонусов")
