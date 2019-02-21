@@ -1,10 +1,9 @@
-standard_card_bonuses = 50
-silver_card_bonuses = 70
-golden_card_bonuses = 100
-input_error = "произошла ошибка начисления"
-
-
 def bonuses(purchase_amount, previous_purchase_amount):
+    standard_card_bonuses = 50
+    silver_card_bonuses = 70
+    golden_card_bonuses = 100
+    input_error = "произошла ошибка начисления"
+
     if 1 < (previous_purchase_amount + purchase_amount) < 15_001:
         accrued_bonuses = purchase_amount // 1000 * standard_card_bonuses
 
