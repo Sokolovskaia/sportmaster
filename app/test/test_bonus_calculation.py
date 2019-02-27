@@ -11,7 +11,3 @@ def test_bonuses_for_silver_card():
 
 def test_bonuses_for_golden_card():
     assert 100 == bonuses(1_950, 200_000)
-
-
-def test_bonuses_for_input_errors():
-    assert "произошла ошибка начисления" == bonuses(-1000, 0)
